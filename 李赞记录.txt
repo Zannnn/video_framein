@@ -1,0 +1,4 @@
+cd /pub/data/lz/video_frame_in/master/infer.py
+python infer.py
+
+暂时没使用预训练的vit，https://huggingface.co/google/vit-base-patch16-224/tree/main
