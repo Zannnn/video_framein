@@ -58,7 +58,7 @@ class VideoInterpolationDataset(Dataset):
             frame3 = self.transform(frame3)
             gt_middle = self.transform(gt_middle)
 
-        return frame1, frame3, gt_middle
+        return frame1, frame3, gt_middle,gt_middle_path 
 
 def get_dataloader(root_dir, batch_size=8, shuffle=True):
     transform = transforms.Compose([

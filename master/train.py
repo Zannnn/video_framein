@@ -78,7 +78,7 @@ def train(root_dir, epochs=10, batch_size=8, lr=1e-3, save_dir="checkpoints"):
         # 使用 tqdm 包装数据加载器
         progress_bar = tqdm(dataloader, desc=f"Training Epoch {epoch + 1}", unit="batch")
         
-        for frame1, frame3, gt_middle in progress_bar:
+        for frame1, frame3, gt_middle, gt_path in progress_bar:
             # 1. 前处理：语义分割
             mask1 = seg_model.predict(frame1)
             mask3 = seg_model.predict(frame3)
